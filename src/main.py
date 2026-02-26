@@ -2,8 +2,24 @@ print("############################")
 print("### CALCULADORA DE NOTAS ###")
 print("############################")
 
+
+contador = 0
+suma = 0
+
 while True:
-    cantidad_notas = int(input("ingrese la cantidad de notas que fueron tomadas en tu proceso de aprendizaje: "))
- 
-    for i in range(cantidad_notas):
-        notas = int(input("ingrese una nota: "))
+    notas = float(input("ingresa una nota (para dar el resulado coloque el numero 0) "))
+
+    
+
+    if notas == 0:
+        break
+
+    suma += notas
+    contador += 1
+    
+if contador > 1:
+    promedio = suma / contador
+    print("¡Listo! se ha generado tu promedio de notas")
+    print(f"La cantidad de notas que tienes son {contador} y tienes un promedio de {promedio}")
+else:
+    print("Ingresa minimo 2 notas para sacar un promedio")
